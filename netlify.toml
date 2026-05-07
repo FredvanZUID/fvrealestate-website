@@ -1,0 +1,38 @@
+[build]
+  publish = "."
+
+# Redirects
+[[redirects]]
+  from = "/apollo"
+  to   = "/apollo-senior-living-fund/"
+  status = 301
+
+[[redirects]]
+  from = "/fonds"
+  to   = "/apollo-senior-living-fund/"
+  status = 301
+
+# Beveiligingsheaders voor alle pagina's
+[[headers]]
+  for = "/*"
+
+  [headers.values]
+  X-Frame-Options              = "DENY"
+  X-Content-Type-Options       = "nosniff"
+  Referrer-Policy              = "strict-origin-when-cross-origin"
+  Permissions-Policy           = "camera=(), microphone=(), geolocation=()"
+  Cache-Control                = "public, max-age=3600"
+
+# Lange cache voor statische assets (versioned via filename/hash)
+[[headers]]
+  for = "/assets/*"
+
+  [headers.values]
+  Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML-bestanden niet cachen — altijd vers ophalen
+[[headers]]
+  for = "/*.html"
+
+  [headers.values]
+  Cache-Control = "public, max-age=0, must-revalidate"

@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Vrijblijvend Gesprek Aanvragen | FVRE</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Neem contact op met FV Real Estate voor een vrijblijvend kennismakingsgesprek over het Apollo Senior Living Fund. Reageren binnen één werkdag.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.fvrealestate.nl/contact/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.fvrealestate.nl/contact/">
+  <meta property="og:title" content="Contact — Vrijblijvend Gesprek Aanvragen | FVRE">
+  <meta property="og:description" content="Vraag een vrijblijvend kennismakingsgesprek aan over het Apollo Senior Living Fund. FV Real Estate reageert binnen één werkdag.">
+  <meta property="og:image" content="https://www.fvrealestate.nl/assets/images/og-image.jpg">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="FV Real Estate">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — Apollo Senior Living Fund | FVRE">
+  <meta name="twitter:description" content="Vrijblijvend kennismakingsgesprek aanvragen. FV Real Estate reageert binnen één werkdag.">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- JSON-LD: LocalBusiness / ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact — FV Real Estate",
+    "url": "https://www.fvrealestate.nl/contact/",
+    "description": "Neem contact op met FV Real Estate voor een vrijblijvend gesprek over het Apollo Senior Living Fund.",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "FV Real Estate B.V.",
+      "url": "https://www.fvrealestate.nl",
+      "telephone": "+31-20-244-7289",
+      "email": "info@fvrealestate.nl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Apollolaan 171, Unit 2.4",
+        "addressLocality": "Amsterdam",
+        "postalCode": "1077 AS",
+        "addressCountry": "NL"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "17:30"
+      }
+    }
+  }
+  </script>
+
+  <!-- Pagina-specifieke stijl -->
+  <style>
+    /* ================================================================
+       CONTACT PAGINA — stijlen
+       ================================================================ */
+
+    /* Hero */
+    .contact-hero {
+      padding: 9rem 0 5rem;
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 60% at 85% 40%, rgba(201, 168, 76, 0.09) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .contact-hero__inner {
+      position: relative;
+      z-index: 1;
+      max-width: 620px;
+    }
+
+    .contact-hero__title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact-hero__lead {
+      font-size: 1.0625rem;
+      line-height: 1.75;
+      color: rgba(255, 255, 255, 0.72);
+      max-width: 520px;
+    }
+
+    /* ---- CONTACT SECTIE ---- */
+    .contact-section {
+      padding: 5rem 0;
+    }
+
+    /* 2-koloms grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    @media (max-width: 1023px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    /* ---- FORMULIER KOLOM ---- */
+    .contact-form-wrap__eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact-form-wrap__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.875rem;
+    }
+
+    .contact-form-wrap__intro {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--gray-600, #4b5563);
+      margin-bottom: 2rem;
+    }
+
+    /* Formulier elementen */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @media (max-width: 599px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.375rem;
+    }
+
+    .form-field label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: 0.01em;
+    }
+
+    .form-field .field-optional {
+      font-weight: 400;
+      color: var(--gray-400, #9ca3af);
+      font-size: 0.75rem;
+      margin-left: 0.25rem;
+    }
+
+    .form-field input,
+    .form-field select,
+    .form-field textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      font-family: var(--font-sans, 'Inter', sans-serif);
+      font-size: 0.9375rem;
+      color: var(--navy);
+      background: var(--white, #ffffff);
+      border: 1.5px solid rgba(13, 27, 42, 0.15);
+      border-radius: 6px;
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+      box-sizing: border-box;
+    }
+
+    .form-field select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%230D1B2A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+      cursor: pointer;
+    }
+
+    .form-field textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-field input:focus,
+    .form-field select:focus,
+    .form-field textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+    }
+
+    /* Fout-state */
+    .form-field.has-error input,
+    .form-field.has-error select,
+    .form-field.has-error textarea {
+      border-color: #dc2626;
+    }
+
+    .form-field .field-error {
+      font-size: 0.75rem;
+      color: #dc2626;
+      margin-top: 0.125rem;
+      display: none;
+    }
+
+    .form-field.has-error .field-error {
+      display: block;
+    }
+
+    /* Honeypot: volledig verborgen voor mensen, zichtbaar voor bots */
+    .form-honeypot {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Submit */
+    .contact-form__submit-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .contact-form__submit {
+      /* Overerft .btn-primary stijlen, fullwidth */
+      width: 100%;
+      justify-content: center;
+      padding: 1rem 1.5rem;
+    }
+
+    .contact-form__privacy {
+      font-size: 0.75rem;
+      color: var(--gray-400, #9ca3af);
+      line-height: 1.6;
+    }
+
+    /* Succes state */
+    .contact-form__success {
+      display: none; /* verborgen tot JS activeert */
+      padding: 2.5rem;
+      background: rgba(201, 168, 76, 0.06);
+      border: 1.5px solid rgba(201, 168, 76, 0.3);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .contact-form__success.is-visible {
+      display: block;
+      animation: success-in 0.4s ease;
+    }
+
+    @keyframes success-in {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .contact-form__success-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.25rem;
+    }
+
+    .contact-form__success-title {
+      font-family: var(--font-serif);
+      font-size: 1.375rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.625rem;
+    }
+
+    .contact-form__success-text {
+      font-size: 0.9375rem;
+      line-height: 1.75;
+      color: var(--gray-600, #4b5563);
+    }
+
+    /* ---- RECHTERKOLOM: CONTACTINFO ---- */
+    .contact-info__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-info__list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .contact-info__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.875rem;
+    }
+
+    .contact-info__item-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(201, 168, 76, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      margin-top: 0.125rem;
+    }
+
+    .contact-info__item-label {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--gray-400, #9ca3af);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-info__item-value {
+      font-size: 0.9375rem;
+      color: var(--navy);
+      line-height: 1.6;
+    }
+
+    .contact-info__item-value a {
+      color: var(--navy);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-info__item-value a:hover {
+      color: var(--gold);
+    }
+
+    /* Afspraak-notitie */
+    .contact-info__note {
+      font-size: 0.875rem;
+      color: var(--gray-600, #4b5563);
+      line-height: 1.7;
+      padding: 1rem 1.25rem;
+      border-left: 3px solid var(--gold);
+      background: rgba(201, 168, 76, 0.04);
+      border-radius: 0 6px 6px 0;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Kaart placeholder */
+    .contact-map {
+      width: 100%;
+      height: 220px;
+      background: #e5e7eb;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .contact-map__label {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #6b7280;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* KvK badge */
+    .contact-info__kvk {
+      margin-top: 1.25rem;
+      font-size: 0.75rem;
+      color: var(--gray-400, #9ca3af);
+    }
+
+    /* ---- WEBINAR SECTIE ---- */
+    .webinar-section {
+      background: var(--ivory, #F5F0E8);
+      padding: 5rem 0;
+    }
+
+    .webinar-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .webinar-inner__eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    .webinar-inner__title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1rem;
+    }
+
+    .webinar-inner__sub {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: var(--gray-600, #4b5563);
+      margin-bottom: 2rem;
+    }
+
+    /* Webinar kenmerken */
+    .webinar-features {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .webinar-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--navy);
+    }
+
+    .webinar-feature__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 767px) {
+      .contact-section {
+        padding: 3.5rem 0;
+      }
+      .contact-hero {
+        padding: 7rem 0 3.5rem;
+      }
+      .webinar-section {
+        padding: 3.5rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATIE (overgenomen van index.html)
+       ============================================================ -->
+  <header role="banner">
+    <nav class="nav" aria-label="Hoofdnavigatie" data-scroll>
+      <div class="container">
+        <div class="nav__inner">
+
+          <!-- Logo -->
+          <a href="/" class="nav__logo" aria-label="FV Real Estate — terug naar homepage">
+            FVRE<span>.</span>
+          </a>
+
+          <!-- Desktop links -->
+          <ul class="nav__links" role="list" aria-label="Paginanavigatie">
+            <li><a href="/apollo-senior-living-fund/" class="nav__link">Apollo Fund</a></li>
+            <li><a href="/de-markt/" class="nav__link">De Markt</a></li>
+            <li><a href="/het-team/" class="nav__link">Team</a></li>
+            <li><a href="/track-record/" class="nav__link">Track Record</a></li>
+            <li><a href="/faq/" class="nav__link">FAQ</a></li>
+            <li><a href="/nieuws/" class="nav__link">Nieuws</a></li>
+          </ul>
+
+          <!-- Desktop CTA -->
+          <a href="/#informatiedocument"
+             class="btn-primary nav__cta"
+             aria-label="Download het gratis informatiedocument van het Apollo Senior Living Fund">
+            Download Informatiedocument
+          </a>
+
+          <!-- Hamburger mobile -->
+          <button class="nav__hamburger"
+                  aria-expanded="false"
+                  aria-controls="mobile-menu"
+                  aria-label="Menu openen">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="nav__mobile" aria-label="Mobiel menu" role="dialog" aria-modal="true" hidden>
+      <ul role="list">
+        <li><a href="/apollo-senior-living-fund/" class="nav__link">Apollo Fund</a></li>
+        <li><a href="/de-markt/" class="nav__link">De Markt</a></li>
+        <li><a href="/het-team/" class="nav__link">Team</a></li>
+        <li><a href="/track-record/" class="nav__link">Track Record</a></li>
+        <li><a href="/faq/" class="nav__link">FAQ</a></li>
+        <li><a href="/nieuws/" class="nav__link">Nieuws</a></li>
+      </ul>
+      <a href="/#informatiedocument" class="btn-primary" style="margin-top:1rem;">
+        Download Informatiedocument
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="contact-hero" aria-labelledby="contact-hero-title">
+      <div class="container">
+        <div class="contact-hero__inner">
+          <span class="eyebrow" style="color:var(--gold);margin-bottom:1rem;display:block;">
+            Vrijblijvend contact
+          </span>
+          <h1 class="contact-hero__title" id="contact-hero-title">
+            Laten we kennis maken.
+          </h1>
+          <p class="contact-hero__lead">
+            Een goed gesprek begint zonder verplichtingen. Vul het formulier in of neem
+            direct contact op &mdash; wij reageren binnen &eacute;&eacute;n werkdag.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTIE — 2 koloms
+         ============================================================ -->
+    <section class="contact-section" aria-labelledby="contact-section-title">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- ---- LINKERKOLOM: FORMULIER ---- -->
+          <div class="contact-form-wrap fade-up">
+            <span class="contact-form-wrap__eyebrow">Stuur een bericht</span>
+            <h2 class="contact-form-wrap__title" id="contact-section-title">
+              Wij nemen persoonlijk contact op.
+            </h2>
+            <p class="contact-form-wrap__intro">
+              Wilt u meer weten over het Apollo Senior Living Fund? Laat uw gegevens achter
+              en wij nemen persoonlijk contact met u op.
+            </p>
+
+            <!-- Succes bericht — verborgen tot submit -->
+            <div class="contact-form__success"
+                 id="form-success"
+                 role="alert"
+                 aria-live="polite"
+                 aria-atomic="true">
+              <div class="contact-form__success-icon" aria-hidden="true">
+                <!-- Vinkje icoon -->
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                  <path d="M4.5 11.5L9 16L17.5 7"
+                        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="contact-form__success-title">Uw aanvraag is ontvangen.</p>
+              <p class="contact-form__success-text">
+                Bedankt voor uw bericht. Een van onze medewerkers neemt binnen &eacute;&eacute;n
+                werkdag persoonlijk contact met u op.
+              </p>
+            </div>
+
+            <!-- Contactformulier -->
+            <form class="contact-form"
+                  id="contact-form"
+                  action="/bedankt/"
+                  method="POST"
+                  aria-label="Contactformulier Apollo Senior Living Fund"
+                  novalidate>
+
+              <!-- Honeypot: spam preventie — verborgen voor mensen -->
+              <input class="form-honeypot"
+                     type="text"
+                     name="website"
+                     id="honeypot-website"
+                     tabindex="-1"
+                     autocomplete="off"
+                     aria-hidden="true">
+
+              <!-- Naam + Bedrijf (2 kolommen) -->
+              <div class="form-row">
+
+                <div class="form-field" id="field-naam">
+                  <label for="contact-naam">
+                    Naam <abbr title="verplicht" aria-label="verplicht">*</abbr>
+                  </label>
+                  <input type="text"
+                         id="contact-naam"
+                         name="naam"
+                         placeholder="Uw voor- en achternaam"
+                         autocomplete="name"
+                         required
+                         aria-required="true"
+                         aria-describedby="error-naam">
+                  <span class="field-error" id="error-naam" role="alert" aria-live="polite">
+                    Vul uw naam in.
+                  </span>
+                </div>
+
+                <div class="form-field" id="field-bedrijf">
+                  <label for="contact-bedrijf">
+                    Bedrijf
+                    <span class="field-optional">(optioneel)</span>
+                  </label>
+                  <input type="text"
+                         id="contact-bedrijf"
+                         name="bedrijf"
+                         placeholder="Uw bedrijfsnaam"
+                         autocomplete="organization">
+                </div>
+
+              </div>
+
+              <!-- E-mail -->
+              <div class="form-field" id="field-email">
+                <label for="contact-email">
+                  E-mailadres <abbr title="verplicht" aria-label="verplicht">*</abbr>
+                </label>
+                <input type="email"
+                       id="contact-email"
+                       name="email"
+                       placeholder="uw@emailadres.nl"
+                       autocomplete="email"
+                       required
+                       aria-required="true"
+                       aria-describedby="error-email">
+                <span class="field-error" id="error-email" role="alert" aria-live="polite">
+                  Vul een geldig e-mailadres in.
+                </span>
+              </div>
+
+              <!-- Telefoonnummer -->
+              <div class="form-field" id="field-telefoon">
+                <label for="contact-telefoon">
+                  Telefoonnummer <abbr title="verplicht" aria-label="verplicht">*</abbr>
+                </label>
+                <input type="tel"
+                       id="contact-telefoon"
+                       name="telefoon"
+                       placeholder="+31 6 &#8213; &#8213; &#8213; &#8213;"
+                       autocomplete="tel"
+                       required
+                       aria-required="true"
+                       aria-describedby="error-telefoon">
+                <span class="field-error" id="error-telefoon" role="alert" aria-live="polite">
+                  Vul een telefoonnummer in zodat wij u kunnen bereiken.
+                </span>
+              </div>
+
+              <!-- Beschikbaar beleggingsvermogen -->
+              <div class="form-field" id="field-vermogen">
+                <label for="contact-vermogen">
+                  Beschikbaar beleggingsvermogen <abbr title="verplicht" aria-label="verplicht">*</abbr>
+                </label>
+                <select id="contact-vermogen"
+                        name="vermogen"
+                        required
+                        aria-required="true"
+                        aria-describedby="error-vermogen">
+                  <option value="" disabled selected>Selecteer een categorie</option>
+                  <option value="100k-250k">&euro; 100.000 &ndash; &euro; 250.000</option>
+                  <option value="250k-500k">&euro; 250.000 &ndash; &euro; 500.000</option>
+                  <option value="500k+">&euro; 500.000 of meer</option>
+                  <option value="onzeker">Nog niet zeker / wil ik bespreken</option>
+                </select>
+                <span class="field-error" id="error-vermogen" role="alert" aria-live="polite">
+                  Maak een keuze uit de lijst.
+                </span>
+              </div>
+
+              <!-- Vraag / opmerking -->
+              <div class="form-field" id="field-bericht">
+                <label for="contact-bericht">
+                  Uw vraag of opmerking
+                  <span class="field-optional">(optioneel)</span>
+                </label>
+                <textarea id="contact-bericht"
+                          name="bericht"
+                          rows="4"
+                          placeholder="Stel gerust uw vraag — hoe specifieker, hoe beter wij u kunnen helpen"
+                          aria-describedby="bericht-hint"></textarea>
+                <span id="bericht-hint" style="font-size:0.75rem;color:var(--gray-400,#9ca3af);">
+                  U kunt ook specifieke vragen over het fonds of uw vermogenssituatie vermelden.
+                </span>
+              </div>
+
+              <!-- Submit + privacy -->
+              <div class="contact-form__submit-wrap">
+                <button type="submit"
+                        class="btn-primary contact-form__submit"
+                        id="form-submit-btn"
+                        aria-label="Verstuur uw contactaanvraag">
+                  Verstuur mijn aanvraag
+                </button>
+                <p class="contact-form__privacy">
+                  Uw gegevens worden uitsluitend gebruikt voor het beantwoorden van uw vraag
+                  en worden niet gedeeld met derden. Zie ook ons
+                  <a href="/privacybeleid/"
+                     style="color:var(--navy);text-decoration:underline;">
+                    privacybeleid
+                  </a>.
+                </p>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- ---- RECHTERKOLOM: CONTACTINFO + KAART ---- -->
+          <div class="contact-info-wrap fade-up" style="transition-delay:0.15s;">
+
+            <h2 class="contact-info__title">Of neem direct contact op</h2>
+
+            <ul class="contact-info__list" role="list" aria-label="Contactgegevens FV Real Estate">
+
+              <!-- Adres -->
+              <li class="contact-info__item">
+                <div class="contact-info__item-icon" aria-hidden="true">
+                  <!-- Locatie pin -->
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                       xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <path d="M8 1.5C5.515 1.5 3.5 3.515 3.5 6c0 3.75 4.5 8.5 4.5 8.5S12.5 9.75 12.5 6c0-2.485-2.015-4.5-4.5-4.5z"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="8" cy="6" r="1.5" stroke="currentColor" stroke-width="1.5"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-info__item-label">Kantooradres</span>
+                  <address class="contact-info__item-value" style="font-style:normal;">
+                    FV Real Estate B.V.<br>
+                    Apollolaan 171, Unit 2.4<br>
+                    1077 AS Amsterdam
+                  </address>
+                </div>
+              </li>
+
+              <!-- E-mail -->
+              <li class="contact-info__item">
+                <div class="contact-info__item-icon" aria-hidden="true">
+                  <!-- Envelop -->
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                       xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <rect x="1.5" y="3.5" width="13" height="9" rx="1.5"
+                          stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M1.5 5l6.5 4.5L14.5 5"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-info__item-label">E-mail</span>
+                  <p class="contact-info__item-value">
+                    <a href="mailto:info@fvrealestate.nl"
+                       aria-label="Stuur een e-mail naar info@fvrealestate.nl">
+                      info@fvrealestate.nl
+                    </a>
+                  </p>
+                </div>
+              </li>
+
+              <!-- Telefoon -->
+              <li class="contact-info__item">
+                <div class="contact-info__item-icon" aria-hidden="true">
+                  <!-- Telefoon -->
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                       xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <path d="M3 2.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v1.75a1 1 0 0 1-.6.916l-.9.45A8.518 8.518 0 0 0 9.334 9.5l.45-.9A1 1 0 0 1 10.7 8H12.5a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1C6.701 12 3 8.299 3 3.5V2.5z"
+                          stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-info__item-label">Telefoon</span>
+                  <p class="contact-info__item-value">
+                    <a href="tel:+31202447289"
+                       aria-label="Bel FV Real Estate op +31 20 244 7289">
+                      +31 (0)20 244 7289
+                    </a>
+                  </p>
+                </div>
+              </li>
+
+              <!-- KvK -->
+              <li class="contact-info__item">
+                <div class="contact-info__item-icon" aria-hidden="true">
+                  <!-- Document -->
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                       xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                    <rect x="2.5" y="1.5" width="11" height="13" rx="1.5"
+                          stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M5 5.5h6M5 8h6M5 10.5h4"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                </div>
+                <div>
+                  <span class="contact-info__item-label">KvK-nummer</span>
+                  <p class="contact-info__item-value">97477346</p>
+                </div>
+              </li>
+
+            </ul>
+
+            <!-- Afspraaknota -->
+            <p class="contact-info__note" role="note">
+              Bezoek op afspraak. Wij ontvangen u graag voor een persoonlijk gesprek op ons
+              kantoor aan de Apollolaan in Amsterdam.
+            </p>
+
+            <!-- Kaart placeholder -->
+            <div class="contact-map"
+                 role="img"
+                 aria-label="Kaartweergave van Apollolaan 171, Amsterdam — exacte locatie FV Real Estate kantoor">
+              <p class="contact-map__label">
+                Apollolaan 171, Amsterdam<br>
+                <span style="color:#9ca3af;font-size:0.75rem;">
+                  Integreer hier Google Maps embed bij publicatie
+                </span>
+              </p>
+            </div>
+
+            <p class="contact-info__kvk">
+              FV Real Estate B.V. &mdash; KvK 97477346 &mdash; BTW NL004697631B01
+            </p>
+
+          </div>
+          <!-- einde rechterkolom -->
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WEBINAR SECTIE
+         ============================================================ -->
+    <section class="webinar-section" aria-labelledby="webinar-title">
+      <div class="container">
+        <div class="webinar-inner fade-up">
+          <span class="webinar-inner__eyebrow">Online informatiesessie</span>
+          <h2 class="webinar-inner__title" id="webinar-title">
+            Liever eerst een webinar bijwonen?
+          </h2>
+          <p class="webinar-inner__sub">
+            Wij organiseren regelmatig online informatiesessies over het Apollo Senior Living
+            Fund &mdash; voor ge&iuml;nteresseerden die eerst meer willen weten zonder direct een
+            gesprek te plannen. Inschrijving is gratis en vrijblijvend.
+          </p>
+
+          <!-- Kenmerken -->
+          <div class="webinar-features" aria-label="Kenmerken van de webinar">
+            <div class="webinar-feature">
+              <span class="webinar-feature__dot" aria-hidden="true"></span>
+              Gratis &amp; vrijblijvend
+            </div>
+            <div class="webinar-feature">
+              <span class="webinar-feature__dot" aria-hidden="true"></span>
+              Online via videoverbinding
+            </div>
+            <div class="webinar-feature">
+              <span class="webinar-feature__dot" aria-hidden="true"></span>
+              Q&amp;A met fondsmanager
+            </div>
+            <div class="webinar-feature">
+              <span class="webinar-feature__dot" aria-hidden="true"></span>
+              Geen verkoopdruk
+            </div>
+          </div>
+
+          <a href="/#informatiedocument"
+             class="btn-primary"
+             aria-label="Schrijf u in voor de volgende online informatiesessie over het Apollo Senior Living Fund">
+            Schrijf u in voor de volgende informatiesessie
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER (overgenomen van index.html)
+       ============================================================ -->
+  <footer class="footer" role="contentinfo" aria-label="Voettekst">
+    <div class="container">
+
+      <div class="footer__grid">
+
+        <!-- Kolom 1: Bedrijfsinfo -->
+        <div>
+          <div class="footer__logo" aria-label="FV Real Estate">FVRE<span>.</span></div>
+          <p class="footer__tagline">
+            Premium vastgoedfondsbeheer gericht op senior living.
+            Selectief. Transparant. Rendementsgericht.
+          </p>
+          <address class="footer__address">
+            Apollolaan 171, Unit 2.4<br>
+            1077 AS Amsterdam<br>
+            <a href="tel:+31202447289" class="footer__link" style="display:inline;margin-top:0.5rem;">
+              +31 (0)20 244 7289
+            </a><br>
+            <a href="mailto:info@fvrealestate.nl" class="footer__link" style="display:inline;">
+              info@fvrealestate.nl
+            </a>
+          </address>
+        </div>
+
+        <!-- Kolom 2: Navigatie -->
+        <nav aria-label="Footer navigatie">
+          <p class="footer__heading">Navigatie</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/apollo-senior-living-fund/" class="footer__link">Apollo Fund</a></li>
+            <li><a href="/de-markt/" class="footer__link">De Markt</a></li>
+            <li><a href="/het-team/" class="footer__link">Het Team</a></li>
+            <li><a href="/track-record/" class="footer__link">Track Record</a></li>
+            <li><a href="/faq/" class="footer__link">FAQ</a></li>
+            <li><a href="/nieuws/" class="footer__link">Nieuws</a></li>
+            <li><a href="/contact/" class="footer__link" aria-current="page">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Kolom 3: Juridisch -->
+        <div>
+          <p class="footer__heading">Juridisch</p>
+          <ul class="footer__links" role="list">
+            <li class="footer__legal-item">KvK: 97477346</li>
+            <li class="footer__legal-item">BTW: NL004697631B01</li>
+            <li class="footer__legal-item">
+              AFM: Geregistreerd aanbieder<br>
+              <a href="https://www.afm.nl/nl-nl/professionals/registers/alle-registers"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="footer__link"
+                 style="font-size:0.75rem;display:inline;"
+                 aria-label="Controleer AFM registratie (opent in nieuw tabblad)">
+                Raadpleeg AFM-register &#8599;
+              </a>
+            </li>
+            <li style="margin-top:0.75rem;">
+              <a href="/privacybeleid/" class="footer__link">Privacybeleid</a>
+            </li>
+            <li><a href="/disclaimer/" class="footer__link">Disclaimer</a></li>
+            <li><a href="/cookiebeleid/" class="footer__link">Cookiebeleid</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 4: Risicowaarschuwing -->
+        <div>
+          <p class="footer__heading">Toezicht &amp; Risico</p>
+          <div class="footer__disclaimer" role="note" aria-label="Wettelijke risicowaarschuwing">
+            <p>
+              <strong style="color:var(--white);">Risicowaarschuwing:</strong> Beleggen brengt
+              risico's met zich mee, inclusief het risico van verlies van (een deel van) uw inleg.
+              De waarde van uw belegging kan fluctueren. In het verleden behaalde resultaten bieden
+              geen garantie voor de toekomst.
+            </p>
+            <p style="margin-top:0.75rem;">
+              FV Real Estate is geregistreerd bij de Autoriteit Financiële Markten (AFM) als
+              aanbieder van beleggingsobjecten conform de Wet op het financieel toezicht (Wft).
+              Dit betreft geen vergunningplicht.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Dit is geen beleggingsadvies. Raadpleeg een onafhankelijk financieel adviseur
+              voordat u besluit te beleggen.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom balk -->
+      <div class="footer__bottom">
+        <p class="footer__bottom-text">
+          &copy; <span id="copyright-year">2026</span> FV Real Estate B.V. Alle rechten voorbehouden.
+        </p>
+        <nav aria-label="Footer juridische links">
+          <ul class="footer__bottom-links" role="list">
+            <li><a href="/privacybeleid/" class="footer__bottom-link">Privacy</a></li>
+            <li><a href="/disclaimer/" class="footer__bottom-link">Disclaimer</a></li>
+            <li><a href="/cookiebeleid/" class="footer__bottom-link">Cookies</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+
+  <!-- GSAP via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+          integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+          defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+          integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOCC5sSeJdWgIHGHJnPMxXMKP1+LVLL+ja2hkBT+DJPQ=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+          defer></script>
+
+  <script>
+    /* ------------------------------------------------------------------
+       NAV — scroll glassmorphism + hamburger
+       ------------------------------------------------------------------ */
+    (function () {
+      const nav = document.querySelector('[data-scroll]');
+      const hamburger = document.querySelector('.nav__hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (nav) {
+        const handler = () => nav.classList.toggle('is-scrolled', window.scrollY > 48);
+        window.addEventListener('scroll', handler, { passive: true });
+        handler();
+      }
+
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', String(!isOpen));
+          if (!isOpen) {
+            mobileMenu.removeAttribute('hidden');
+            mobileMenu.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+          } else {
+            mobileMenu.classList.remove('is-open');
+            mobileMenu.setAttribute('hidden', '');
+            document.body.style.overflow = '';
+          }
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.classList.remove('is-open');
+            mobileMenu.setAttribute('hidden', '');
+            document.body.style.overflow = '';
+          });
+        });
+
+        document.addEventListener('keydown', e => {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.classList.remove('is-open');
+            mobileMenu.setAttribute('hidden', '');
+            document.body.style.overflow = '';
+            hamburger.focus();
+          }
+        });
+      }
+    })();
+
+    /* ------------------------------------------------------------------
+       GSAP SCROLL ANIMATIES
+       ------------------------------------------------------------------ */
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof gsap === 'undefined') {
+        document.querySelectorAll('.fade-up').forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      gsap.registerPlugin(ScrollTrigger);
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) {
+        document.querySelectorAll('.fade-up').forEach(el => el.classList.add('is-visible'));
+        return;
+      }
+      gsap.utils.toArray('.fade-up').forEach(el => {
+        gsap.fromTo(el,
+          { opacity: 0, y: 32 },
+          {
+            opacity: 1, y: 0, duration: 0.75, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 90%', toggleActions: 'play none none none' }
+          }
+        );
+      });
+    });
+
+    /* ------------------------------------------------------------------
+       FORMULIER VALIDATIE & SUCCESS STATE
+       - Controleert: required velden, email-formaat, honeypot
+       - Geen echte backend: preventDefault + success message
+       ------------------------------------------------------------------ */
+    (function () {
+      const form        = document.getElementById('contact-form');
+      const successBox  = document.getElementById('form-success');
+      const submitBtn   = document.getElementById('form-submit-btn');
+
+      if (!form) return;
+
+      /* Hulpfuncties */
+      function isValidEmail(val) {
+        /* RFC-compatible regex — simpel maar effectief */
+        return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val.trim());
+      }
+
+      function setError(fieldWrap, show) {
+        if (!fieldWrap) return;
+        fieldWrap.classList.toggle('has-error', show);
+      }
+
+      function clearError(fieldWrap) {
+        setError(fieldWrap, false);
+      }
+
+      /* Live-validatie bij verlaten van een veld (blur) */
+      ['contact-naam', 'contact-email', 'contact-telefoon', 'contact-vermogen'].forEach(id => {
+        const input = document.getElementById(id);
+        if (!input) return;
+        input.addEventListener('blur', () => validateField(input));
+        input.addEventListener('input', () => {
+          /* Verwijder fout zodra gebruiker begint te typen */
+          const wrap = input.closest('.form-field');
+          if (wrap && wrap.classList.contains('has-error')) {
+            validateField(input);
+          }
+        });
+      });
+
+      function validateField(input) {
+        const wrap = input.closest('.form-field');
+        if (!wrap) return true;
+
+        const val = input.value.trim();
+
+        if (input.id === 'contact-email') {
+          const ok = val && isValidEmail(val);
+          setError(wrap, !ok);
+          return ok;
+        }
+
+        if (input.required) {
+          const ok = val.length > 0;
+          setError(wrap, !ok);
+          return ok;
+        }
+
+        return true;
+      }
+
+      /* Submit handler */
+      form.addEventListener('submit', function (e) {
+        e.preventDefault(); /* Voorkom echte submit — geen backend */
+
+        /* Honeypot check: als dit veld is ingevuld, doe niets */
+        const honeypot = form.querySelector('[name="website"]');
+        if (honeypot && honeypot.value) {
+          return; /* Stille weigering */
+        }
+
+        /* Valideer alle required velden */
+        const requiredIds = ['contact-naam', 'contact-email', 'contact-telefoon', 'contact-vermogen'];
+        let allValid = true;
+        let firstInvalidField = null;
+
+        requiredIds.forEach(id => {
+          const input = document.getElementById(id);
+          if (!input) return;
+          const valid = validateField(input);
+          if (!valid) {
+            allValid = false;
+            if (!firstInvalidField) firstInvalidField = input;
+          }
+        });
+
+        /* Focus op het eerste fout-veld voor toegankelijkheid */
+        if (!allValid) {
+          if (firstInvalidField) firstInvalidField.focus();
+          return;
+        }
+
+        /* Succes: verberg formulier, toon bevestiging */
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Versturen...';
+
+        /* Simuleer een korte vertraging (zoals een echte submit) */
+        setTimeout(function () {
+          form.style.display = 'none';
+          successBox.classList.add('is-visible');
+
+          /* Scroll smooth naar bevestiging */
+          successBox.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+          /* Focus op success box voor screenreaders */
+          successBox.focus();
+        }, 600);
+      });
+    })();
+
+    /* ------------------------------------------------------------------
+       COPYRIGHT JAAR — dynamisch
+       ------------------------------------------------------------------ */
+    const yearEl = document.getElementById('copyright-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

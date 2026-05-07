@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Het Team — De Mensen Achter FVRE | Apollo Senior Living Fund</title>
+
+  <!-- Meta SEO -->
+  <meta name="description" content="Maak kennis met het team van FV Real Estate: de mensen achter het Apollo Senior Living Fund. Ervaren professionals in vastgoed, finance en fondsbeheer.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.fvrealestate.nl/het-team/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.fvrealestate.nl/het-team/">
+  <meta property="og:title" content="Het Team — De Mensen Achter FVRE | Apollo Senior Living Fund">
+  <meta property="og:description" content="Achter elk goed fonds staat een team met de juiste kennis, ervaring en integriteit. Maak kennis met de directie en adviseurs van FV Real Estate.">
+  <meta property="og:image" content="https://www.fvrealestate.nl/assets/images/og-image.jpg">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="FV Real Estate">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Het Team — FV Real Estate | Apollo Senior Living Fund">
+  <meta name="twitter:description" content="Maak kennis met het team achter het Apollo Senior Living Fund. Ervaring, integriteit en transparantie.">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+
+  <!-- JSON-LD: Organization met teamleden -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "FV Real Estate",
+    "alternateName": "FVRE",
+    "url": "https://www.fvrealestate.nl",
+    "logo": "https://www.fvrealestate.nl/assets/images/logo.svg",
+    "description": "FV Real Estate is een gespecialiseerde vastgoedfondsbeheerder gericht op premium senior living in Nederland.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Apollolaan 171, Unit 2.4",
+      "addressLocality": "Amsterdam",
+      "postalCode": "1077 AS",
+      "addressCountry": "NL"
+    },
+    "email": "info@fvrealestate.nl",
+    "telephone": "+31-20-244-7289",
+    "member": [
+      {
+        "@type": "Person",
+        "name": "Salome Daftari",
+        "jobTitle": "Eigenaar & Directeur",
+        "worksFor": { "@type": "Organization", "name": "FV Real Estate" }
+      },
+      {
+        "@type": "Person",
+        "name": "Marc Busse",
+        "jobTitle": "Eigenaar & Directeur",
+        "worksFor": { "@type": "Organization", "name": "FV Real Estate" }
+      },
+      {
+        "@type": "Person",
+        "name": "Jochem Buse",
+        "jobTitle": "Fondsmanager",
+        "worksFor": { "@type": "Organization", "name": "FV Real Estate" }
+      },
+      {
+        "@type": "Person",
+        "name": "Romeo Olie",
+        "jobTitle": "Financieel Directeur",
+        "worksFor": { "@type": "Organization", "name": "FV Real Estate" }
+      },
+      {
+        "@type": "Person",
+        "name": "Francis Hopman",
+        "jobTitle": "Marketing",
+        "worksFor": { "@type": "Organization", "name": "FV Real Estate" }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Inline stijl team cards (aanvullend op style.css) -->
+  <style>
+    /* Team grid */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Team card */
+    .team-card {
+      background: var(--white);
+      border: 1px solid var(--ivory-dark, #E8E0D0);
+      border-radius: 2px;
+      padding: 2rem;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .team-card:hover {
+      box-shadow: 0 12px 40px rgba(13,27,42,0.10);
+      transform: translateY(-3px);
+    }
+
+    /* Avatar */
+    .team-card__avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--ivory);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      color: var(--navy);
+      font-size: 1.25rem;
+      margin-bottom: 1.25rem;
+      border: 2px solid var(--gold);
+      flex-shrink: 0;
+    }
+
+    .team-card__name {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+    }
+
+    .team-card__title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .team-card__bio {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+
+    /* Raad van Advies grid */
+    .advisors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .advisor-card {
+      background: var(--ivory);
+      border-radius: 2px;
+      padding: 1.5rem;
+      border-left: 3px solid var(--gold);
+    }
+
+    .advisor-card__name {
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.2rem;
+    }
+
+    .advisor-card__title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 0.75rem;
+    }
+
+    .advisor-card__bio {
+      font-size: 0.875rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* Filosofie blok */
+    .filosofie {
+      background: var(--navy);
+      border-radius: 2px;
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .filosofie::before {
+      content: '\201C';
+      font-family: var(--font-serif);
+      font-size: 8rem;
+      color: var(--gold);
+      opacity: 0.15;
+      position: absolute;
+      top: -1rem;
+      left: 1.5rem;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .filosofie__tekst {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--white);
+      line-height: 1.75;
+      font-style: italic;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 767px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .advisors-grid { grid-template-columns: 1fr; }
+      .filosofie { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAVIGATIE
+       ============================================================ -->
+  <header role="banner">
+    <nav class="nav" aria-label="Hoofdnavigatie" data-scroll>
+      <div class="container">
+        <div class="nav__inner">
+
+          <a href="/" class="nav__logo" aria-label="FV Real Estate — terug naar homepage">
+            FVRE<span>.</span>
+          </a>
+
+          <ul class="nav__links" role="list" aria-label="Paginanavigatie">
+            <li><a href="/apollo-senior-living-fund/" class="nav__link">Apollo Fund</a></li>
+            <li><a href="/de-markt/" class="nav__link">De Markt</a></li>
+            <li><a href="/het-team/" class="nav__link is-active" aria-current="page">Team</a></li>
+            <li><a href="/track-record/" class="nav__link">Track Record</a></li>
+            <li><a href="/faq/" class="nav__link">FAQ</a></li>
+            <li><a href="/nieuws/" class="nav__link">Nieuws</a></li>
+          </ul>
+
+          <a href="/#informatiedocument"
+             class="btn-primary nav__cta"
+             aria-label="Download het gratis informatiedocument van het Apollo Senior Living Fund">
+            Download Informatiedocument
+          </a>
+
+          <button class="nav__hamburger"
+                  aria-expanded="false"
+                  aria-controls="mobile-menu"
+                  aria-label="Menu openen">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+        </div>
+      </div>
+    </nav>
+
+    <div id="mobile-menu" class="nav__mobile" aria-label="Mobiel menu" role="dialog" aria-modal="true" hidden>
+      <ul role="list">
+        <li><a href="/apollo-senior-living-fund/" class="nav__link">Apollo Fund</a></li>
+        <li><a href="/de-markt/" class="nav__link">De Markt</a></li>
+        <li><a href="/het-team/" class="nav__link">Team</a></li>
+        <li><a href="/track-record/" class="nav__link">Track Record</a></li>
+        <li><a href="/faq/" class="nav__link">FAQ</a></li>
+        <li><a href="/nieuws/" class="nav__link">Nieuws</a></li>
+      </ul>
+      <a href="/#informatiedocument" class="btn-primary" style="margin-top:1rem;">
+        Download Informatiedocument
+      </a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" aria-label="Het team — introductie">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__line" aria-hidden="true"></div>
+
+      <div class="hero__content">
+
+        <div class="hero__badge" aria-label="Sectie">
+          <svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true" focusable="false">
+            <circle cx="5" cy="5" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="5" cy="5" r="1.5" fill="currentColor"/>
+          </svg>
+          Het Team
+        </div>
+
+        <h1 class="hero__title">
+          De mensen achter<br>
+          <em>uw rendement.</em>
+        </h1>
+
+        <p class="hero__sub">
+          Achter elk goed fonds staat een team met de juiste kennis, ervaring en integriteit.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#team"
+             class="btn-primary"
+             aria-label="Bekijk het team van FV Real Estate">
+            Bekijk het team
+          </a>
+          <a href="/contact/"
+             class="btn-secondary"
+             aria-label="Neem contact op met het team">
+            Neem contact op
+          </a>
+        </div>
+
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero__scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TRUST BAR
+         ============================================================ -->
+    <aside class="trust-bar" aria-label="Team kerngegevens">
+      <div class="container">
+        <ul class="trust-bar__inner" role="list">
+          <li class="trust-bar__item trust-bar__item--gold">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true" focusable="false">
+              <path d="M7 1L8.545 5.09H13L9.56 7.665L10.908 12L7 9.185L3.092 12L4.44 7.665L1 5.09H5.455L7 1Z" fill="currentColor"/>
+            </svg>
+            AFM Geregistreerd
+          </li>
+          <li class="trust-bar__divider" aria-hidden="true">|</li>
+          <li class="trust-bar__item">5 professionals</li>
+          <li class="trust-bar__divider" aria-hidden="true">|</li>
+          <li class="trust-bar__item">Vastgoed — Finance — Fondsbeheer</li>
+          <li class="trust-bar__divider" aria-hidden="true">|</li>
+          <li class="trust-bar__item trust-bar__item--gold">Transparantie als kernwaarde</li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- ============================================================
+         TEAM GRID
+         ============================================================ -->
+    <section class="section" id="team" aria-labelledby="team-title">
+      <div class="container">
+
+        <div class="text-center" style="margin-bottom:3.5rem;">
+          <span class="eyebrow fade-up">Directie & Management</span>
+          <h2 class="section-title fade-up" id="team-title" style="transition-delay:0.1s;">
+            Het team van FV Real Estate
+          </h2>
+          <p class="section-lead fade-up" style="margin-inline:auto;transition-delay:0.2s;">
+            Vijf professionals met uiteenlopende achtergronden. Één gedeelde overtuiging:
+            verantwoord beleggen en maatschappelijke impact zijn geen tegenstelling.
+          </p>
+        </div>
+
+        <!-- 5 teamleden -->
+        <div class="team-grid" role="list">
+
+          <!-- Salome Daftari -->
+          <article class="team-card fade-up" role="listitem" aria-labelledby="salome-naam">
+            <div class="team-card__avatar" aria-hidden="true">SD</div>
+            <div class="team-card__name" id="salome-naam">Salome Daftari</div>
+            <div class="team-card__title">Eigenaar &amp; Directeur</div>
+            <p class="team-card__bio">
+              Salome Daftari is mede-oprichter en directeur van FV Real Estate. Met een achtergrond
+              in vastgoedinvesteringen en ondernemerschapsstrategie richtte zij FV Real Estate op
+              vanuit de overtuiging dat particulier beleggingsvermogen en maatschappelijke opgaven
+              elkaar kunnen versterken. Salome draagt de eindverantwoordelijkheid voor de strategische
+              koers van het bedrijf en de relatie met fondsdeelnemers. Haar leidraad: transparantie
+              is de basis van elk duurzaam vertrouwen.
+            </p>
+          </article>
+
+          <!-- Marc Busse -->
+          <article class="team-card fade-up" role="listitem" style="transition-delay:0.1s;" aria-labelledby="marc-naam">
+            <div class="team-card__avatar" aria-hidden="true">MB</div>
+            <div class="team-card__name" id="marc-naam">Marc Busse</div>
+            <div class="team-card__title">Eigenaar &amp; Directeur</div>
+            <p class="team-card__bio">
+              Marc Busse is mede-oprichter van FV Real Estate en verantwoordelijk voor de acquisitie-
+              en ontwikkelstrategie van het fonds. Hij heeft jarenlange ervaring in vastgoedontwikkeling
+              en portfoliobeheer, met een focus op residentieel en zorgvastgoed. Marc beoordeelt elk
+              project op zijn eigen merites — locatie, verhuurbaarheid, bouwkwaliteit en
+              langetermijnpotentieel. Zijn instelling: liever geen deal dan een slechte deal.
+            </p>
+          </article>
+
+          <!-- Jochem Buse -->
+          <article class="team-card fade-up" role="listitem" style="transition-delay:0.2s;" aria-labelledby="jochem-naam">
+            <div class="team-card__avatar" aria-hidden="true">JB</div>
+            <div class="team-card__name" id="jochem-naam">Jochem Buse</div>
+            <div class="team-card__title">Fondsmanager</div>
+            <p class="team-card__bio">
+              Jochem Buse beheert het Apollo Senior Living Fund op dagelijkse basis. Hij is
+              verantwoordelijk voor het bewaken van de fondsstructuur, de rapportage aan deelnemers
+              en de coördinatie met externe partijen zoals notarissen, juridische adviseurs en
+              vastgoedpartners. Jochem zorgt ervoor dat de belangen van fondsdeelnemers te allen
+              tijde centraal staan in alle operationele beslissingen.
+            </p>
+          </article>
+
+          <!-- Romeo Olie -->
+          <article class="team-card fade-up" role="listitem" style="transition-delay:0.3s;" aria-labelledby="romeo-naam">
+            <div class="team-card__avatar" aria-hidden="true">RO</div>
+            <div class="team-card__name" id="romeo-naam">Romeo Olie</div>
+            <div class="team-card__title">Financieel Directeur</div>
+            <p class="team-card__bio">
+              Romeo Olie is verantwoordelijk voor de financiële architectuur van het fonds. Hij bewaakt
+              de kasstromen, de financieringsstructuren en de kwartaalrapportages die deelnemers
+              ontvangen. Met zijn achtergrond in corporate finance en vastgoedfinanciering zorgt Romeo
+              voor de financiële robuustheid die uw kwartaaluitkering mogelijk maakt.
+            </p>
+          </article>
+
+          <!-- Francis Hopman -->
+          <article class="team-card fade-up" role="listitem" style="transition-delay:0.4s;" aria-labelledby="francis-naam">
+            <div class="team-card__avatar" aria-hidden="true">FH</div>
+            <div class="team-card__name" id="francis-naam">Francis Hopman</div>
+            <div class="team-card__title">Marketing</div>
+            <p class="team-card__bio">
+              Francis Hopman is verantwoordelijk voor de communicatie en positionering van FV Real
+              Estate. Hij zorgt ervoor dat complexe fondsstructuren en financiële concepten op een
+              heldere, eerlijke manier worden gecommuniceerd. Francis gelooft dat de beste marketing
+              begint met de waarheid.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RAAD VAN ADVIES
+         ============================================================ -->
+    <section class="section" id="raad-van-advies"
+             aria-labelledby="raad-title"
+             style="background:var(--ivory);">
+      <div class="container">
+
+        <div class="text-center" style="margin-bottom:3rem;">
+          <span class="eyebrow fade-up">Externe expertise</span>
+          <h2 class="section-title fade-up" id="raad-title" style="transition-delay:0.1s;">
+            Raad van Advies
+          </h2>
+          <p class="section-lead fade-up" style="margin-inline:auto;transition-delay:0.2s;">
+            Drie onafhankelijke adviseurs met diepgaande sectorkennis die het team
+            versterken op strategisch niveau.
+          </p>
+        </div>
+
+        <div class="advisors-grid" role="list">
+
+          <!-- Sylvia Slaughter -->
+          <article class="advisor-card fade-up" role="listitem" aria-labelledby="sylvia-naam">
+            <div class="advisor-card__name" id="sylvia-naam">Sylvia Slaughter</div>
+            <div class="advisor-card__title">Adviseur</div>
+            <p class="advisor-card__bio">
+              Brede expertise in vastgoedbeheer en portefeuilleoptimalisatie. Adviseert FVRE
+              op het gebied van asset management en langetermijnwaardecreatie van vastgoedobjecten.
+            </p>
+          </article>
+
+          <!-- Rik van Oorschot -->
+          <article class="advisor-card fade-up" role="listitem" style="transition-delay:0.15s;" aria-labelledby="rik-naam">
+            <div class="advisor-card__name" id="rik-naam">Rik van Oorschot</div>
+            <div class="advisor-card__title">Adviseur</div>
+            <p class="advisor-card__bio">
+              Achtergrond in de financiële sector en beleggingsfondsen. Brengt institutionele
+              fondskennis en regelgevingsinzicht in op het gebied van compliance en fondsstructurering.
+            </p>
+          </article>
+
+          <!-- Joost Nieuwenhuijzen -->
+          <article class="advisor-card fade-up" role="listitem" style="transition-delay:0.30s;" aria-labelledby="joost-naam">
+            <div class="advisor-card__name" id="joost-naam">Joost Nieuwenhuijzen</div>
+            <div class="advisor-card__title">Adviseur</div>
+            <p class="advisor-card__bio">
+              Specialist in zorgvastgoed en de senior living sector. Adviseert op de operationele
+              en maatschappelijke dimensies van seniorenhuisvesting in de Nederlandse markt.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MISSIE / FILOSOFIE
+         ============================================================ -->
+    <section class="section" id="filosofie" aria-labelledby="filosofie-title">
+      <div class="container">
+
+        <div class="grid-2" style="align-items:center;gap:5rem;">
+
+          <div class="fade-left">
+            <span class="eyebrow">Onze overtuiging</span>
+            <h2 class="section-title" id="filosofie-title">
+              Onze filosofie
+            </h2>
+            <p style="color:var(--gray-600);line-height:1.8;margin-bottom:1.5rem;">
+              Wij kiezen bewust voor kwaliteit boven volume. Elk project dat wij selecteren,
+              elk gesprek dat wij voeren, en elke euro die wij beheren, weerspiegelt onze overtuiging
+              dat verantwoord beleggen en maatschappelijke impact geen tegenstelling zijn —
+              maar hetzelfde zijn.
+            </p>
+            <span class="badge-afm" aria-label="Dit fonds is AFM geregistreerd">AFM Geregistreerd Fonds</span>
+          </div>
+
+          <div class="filosofie fade-right" aria-label="Citaat FV Real Estate filosofie">
+            <p class="filosofie__tekst">
+              "Transparantie is de basis van elk duurzaam vertrouwen. Liever geen deal dan een
+              slechte deal. De beste marketing begint met de waarheid."
+            </p>
+            <p style="color:var(--gold);font-size:0.8rem;font-weight:600;text-transform:uppercase;
+               letter-spacing:0.08em;margin-top:1.5rem;position:relative;z-index:1;">
+              — Het team van FV Real Estate
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA
+         ============================================================ -->
+    <section class="leadmagnet section" id="team-cta" aria-labelledby="team-cta-title">
+      <div class="container">
+        <div style="max-width:560px;margin-inline:auto;text-align:center;">
+          <span class="eyebrow fade-up">Volgende stap</span>
+          <h2 class="section-title section-title--white fade-up" id="team-cta-title"
+              style="transition-delay:0.1s;">
+            Klaar om verder te gaan?
+          </h2>
+          <p class="section-lead section-lead--white fade-up"
+             style="margin-inline:auto;transition-delay:0.2s;">
+            Bekijk alle details van het fonds of neem direct contact op met ons team.
+          </p>
+          <div class="hero__actions fade-up"
+               style="justify-content:center;transition-delay:0.3s;">
+            <a href="/apollo-senior-living-fund/"
+               class="btn-primary"
+               aria-label="Bekijk de volledige details van het Apollo Senior Living Fund">
+              Bekijk het Apollo Fund
+            </a>
+            <a href="/contact/"
+               class="btn-secondary"
+               aria-label="Neem contact op met het team"
+               style="border-color:rgba(255,255,255,0.4);color:var(--white);">
+              Neem contact op
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo" aria-label="Voettekst">
+    <div class="container">
+
+      <div class="footer__grid">
+
+        <div>
+          <div class="footer__logo" aria-label="FV Real Estate">FVRE<span>.</span></div>
+          <p class="footer__tagline">
+            Premium vastgoedfondsbeheer gericht op senior living.
+            Selectief. Transparant. Rendementsgericht.
+          </p>
+          <address class="footer__address">
+            Apollolaan 171, Unit 2.4<br>
+            1077 AS Amsterdam<br>
+            <a href="tel:+31202447289" class="footer__link" style="display:inline;margin-top:0.5rem;">
+              +31 (0)20 244 7289
+            </a><br>
+            <a href="mailto:info@fvrealestate.nl" class="footer__link" style="display:inline;">
+              info@fvrealestate.nl
+            </a>
+          </address>
+        </div>
+
+        <nav aria-label="Footer navigatie">
+          <p class="footer__heading">Navigatie</p>
+          <ul class="footer__links" role="list">
+            <li><a href="/apollo-senior-living-fund/" class="footer__link">Apollo Fund</a></li>
+            <li><a href="/de-markt/" class="footer__link">De Markt</a></li>
+            <li><a href="/het-team/" class="footer__link">Het Team</a></li>
+            <li><a href="/track-record/" class="footer__link">Track Record</a></li>
+            <li><a href="/faq/" class="footer__link">FAQ</a></li>
+            <li><a href="/nieuws/" class="footer__link">Nieuws</a></li>
+            <li><a href="/contact/" class="footer__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <p class="footer__heading">Juridisch</p>
+          <ul class="footer__links" role="list">
+            <li class="footer__legal-item">KvK: 97477346</li>
+            <li class="footer__legal-item">BTW: NL004697631B01</li>
+            <li class="footer__legal-item">
+              AFM: Geregistreerd aanbieder<br>
+              <a href="https://www.afm.nl/nl-nl/professionals/registers/alle-registers"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="footer__link"
+                 style="font-size:0.75rem;display:inline;"
+                 aria-label="Controleer AFM registratie (opent in nieuw tabblad)">
+                Raadpleeg AFM-register ↗
+              </a>
+            </li>
+            <li style="margin-top:0.75rem;">
+              <a href="/privacybeleid/" class="footer__link">Privacybeleid</a>
+            </li>
+            <li><a href="/disclaimer/" class="footer__link">Disclaimer</a></li>
+            <li><a href="/cookiebeleid/" class="footer__link">Cookiebeleid</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__heading">Toezicht &amp; Risico</p>
+          <div class="footer__disclaimer" role="note" aria-label="Wettelijke risicowaarschuwing">
+            <p>
+              <strong style="color:var(--white);">Risicowaarschuwing:</strong> Beleggen brengt risico's
+              met zich mee, inclusief het risico van verlies van (een deel van) uw inleg.
+              De waarde van uw belegging kan fluctueren. In het verleden behaalde resultaten
+              bieden geen garantie voor de toekomst.
+            </p>
+            <p style="margin-top:0.75rem;">
+              FV Real Estate is geregistreerd bij de Autoriteit Financiële Markten (AFM)
+              als aanbieder van beleggingsobjecten conform de Wet op het financieel toezicht (Wft).
+              Dit betreft geen vergunningplicht.
+            </p>
+            <p style="margin-top:0.75rem;">
+              Dit is geen beleggingsadvies. Raadpleeg een onafhankelijk financieel adviseur
+              voordat u besluit te beleggen.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__bottom-text">
+          &copy; <span id="copyright-year">2026</span> FV Real Estate B.V. Alle rechten voorbehouden.
+        </p>
+        <nav aria-label="Footer juridische links">
+          <ul class="footer__bottom-links" role="list">
+            <li><a href="/privacybeleid/" class="footer__bottom-link">Privacy</a></li>
+            <li><a href="/disclaimer/" class="footer__bottom-link">Disclaimer</a></li>
+            <li><a href="/cookiebeleid/" class="footer__bottom-link">Cookies</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       JAVASCRIPT
+       ============================================================ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+          integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+          defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+          integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOCC5sSeJdWgIHGHJnPMxXMKP1+LVLL+ja2hkBT+DJPQ=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+          defer></script>
+
+  <script>
+    /* ------------------------------------------------------------------
+       NAV — scroll glassmorphism + hamburger
+       ------------------------------------------------------------------ */
+    (function () {
+      const nav = document.querySelector('[data-scroll]');
+      const hamburger = document.querySelector('.nav__hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (nav) {
+        const handler = () => nav.classList.toggle('is-scrolled', window.scrollY > 48);
+        window.addEventListener('scroll', handler, { passive: true });
+        handler();
+      }
+
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+          hamburger.setAttribute('aria-expanded', String(!isOpen));
+          if (!isOpen) {
+            mobileMenu.removeAttribute('hidden');
+            mobileMenu.classList.add('is-open');
+            document.body.style.overflow = 'hidden';
+          } else {
+            mobileMenu.classList.remove('is-open');
+            mobileMenu.setAttribute('hidden', '');
+            document.body.style.overflow = '';
+          }
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.classList.remove('is-open');
+            mobileMenu.setAttribute('hidden', '');
+            document.body.style.overflow = '';
+          });
+        });
+
+        document.addEventListener('keydown', e => {
+          if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+            hamburger.setAttribute('aria-expanded', 'false');
+            mobileMenu.classList.remove('is-open');
+            mobileMenu.setAttribute('hidden', '');
+            document.body.style.overflow = '';
+            hamburger.focus();
+          }
+        });
+      }
+    })();
+
+    /* ------------------------------------------------------------------
+       GSAP SCROLL ANIMATIES
+       ------------------------------------------------------------------ */
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof gsap === 'undefined') {
+        document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+
+      gsap.registerPlugin(ScrollTrigger);
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReduced) {
+        document.querySelectorAll('.fade-up, .fade-left, .fade-right').forEach(el => {
+          el.classList.add('is-visible');
+        });
+        return;
+      }
+
+      gsap.utils.toArray('.fade-up').forEach(el => {
+        gsap.fromTo(el,
+          { opacity: 0, y: 40 },
+          { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+          }
+        );
+      });
+
+      gsap.utils.toArray('.fade-left').forEach(el => {
+        gsap.fromTo(el,
+          { opacity: 0, x: -40 },
+          { opacity: 1, x: 0, duration: 0.8, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+          }
+        );
+      });
+
+      gsap.utils.toArray('.fade-right').forEach(el => {
+        gsap.fromTo(el,
+          { opacity: 0, x: 40 },
+          { opacity: 1, x: 0, duration: 0.8, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none none' }
+          }
+        );
+      });
+    });
+
+    /* ------------------------------------------------------------------
+       COPYRIGHT JAAR
+       ------------------------------------------------------------------ */
+    const yearEl = document.getElementById('copyright-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
