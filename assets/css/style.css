@@ -2358,3 +2358,234 @@ input[type="range"]::-moz-range-thumb {
     flex: 1;
   }
 }
+
+/* =============================================================================
+   25. RESPONSIVE — max 767px (mobile-only)
+   Fixes voor alles onder de 768px breakpoint
+============================================================================= */
+
+@media (max-width: 767px) {
+
+  /* --- Navigatie --- */
+  /* CTA-knop in nav verbergen op mobile — hamburger is genoeg */
+  .nav__cta {
+    display: none;
+  }
+
+  /* Nav logo kleiner op mobile */
+  .nav__logo-name { font-size: var(--text-base); }
+  .nav__logo-mark { width: 30px; height: 30px; font-size: var(--text-base); }
+
+  /* Mobile menu links iets kleiner */
+  .nav__mobile-link {
+    font-size: var(--text-2xl);
+  }
+
+  /* --- Sectie-spacing: halveer vertical padding op mobile --- */
+  .section      { padding-block: var(--space-lg); }    /* 4rem i.p.v. 6rem */
+  .section--sm  { padding-block: var(--space-md); }    /* 2rem */
+  .section--lg  { padding-block: var(--space-xl); }    /* 6rem i.p.v. 10rem */
+
+  /* --- Grid: 2/3/4-kolommen → 1 kolom op mobile --- */
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-md) !important;
+  }
+
+  /* --- Hero --- */
+  .hero__title {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+  }
+
+  .hero__subtitle {
+    font-size: var(--text-base);
+    margin-bottom: var(--space-md);
+  }
+
+  /* Buttons in hero stapelen verticaal en worden full-width */
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Hero stat bar: 2×2 grid op mobile */
+  .hero__stats-row {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__stat {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .hero__stat:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .hero__stat:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  /* --- Section header --- */
+  .section-header {
+    margin-bottom: var(--space-md);
+  }
+
+  /* --- Cards: minder interne padding --- */
+  .card {
+    padding: var(--space-sm);
+  }
+
+  /* --- Calculator --- */
+  .calculator {
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+  }
+
+  .calc-amount-display {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  /* Resultaten: 2 kolommen behouden (past op mobile) */
+  .calc-results {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Vergelijkingsrij: verberg grafiekbalk, toon alleen label + bedrag */
+  .comp-item {
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+  }
+
+  .comp-item__bar-wrap {
+    display: none;
+  }
+
+  .comp-item__label {
+    font-size: var(--text-sm);
+  }
+
+  .comp-item__amount {
+    text-align: right;
+    font-size: var(--text-sm);
+  }
+
+  /* --- FAQ --- */
+  .faq-question {
+    padding: 1rem var(--space-sm);
+    gap: 0.75rem;
+    font-size: var(--text-sm);
+  }
+
+  .faq-answer__inner {
+    padding-inline: var(--space-sm);
+  }
+
+  /* --- Key facts tabel (fondspagina) --- */
+  .key-facts__row {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .key-facts__value {
+    text-align: left;
+    flex-basis: 100%;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  /* --- Vergelijkingstabel: horizontaal scrollbaar --- */
+  .comparison-table {
+    min-width: 540px;
+    font-size: var(--text-xs);
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 0.75rem 0.875rem;
+  }
+
+  /* --- Timeline --- */
+  .timeline-step {
+    gap: var(--space-sm);
+  }
+
+  /* --- CTA section --- */
+  .cta-section__body {
+    font-size: var(--text-base);
+  }
+
+  .cta-section__title {
+    font-size: clamp(var(--text-2xl), 7vw, var(--text-3xl));
+  }
+
+  /* --- Buttons global: grotere tap targets op mobile --- */
+  .btn {
+    padding: 1rem 1.75rem;
+    min-height: 48px;
+  }
+
+  .btn--sm {
+    padding: 0.75rem 1.25rem;
+    min-height: 44px;
+  }
+
+  /* --- Metrics grid: 2 kolommen op mobile (is al goed) --- */
+
+  /* --- Trust bar: 2×2 blijft --- */
+
+  /* --- Footer --- */
+  .footer__afm {
+    flex-direction: column;
+  }
+}
+
+/* =============================================================================
+   26. RESPONSIVE — max 400px (small mobile / SE-formaat)
+============================================================================= */
+
+@media (max-width: 400px) {
+
+  /* Minder side-padding op hele kleine schermen */
+  .container,
+  .container-narrow,
+  .container-wide {
+    padding-inline: var(--space-sm);
+  }
+
+  /* Hero titel nóg compacter */
+  .hero__title {
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+  }
+
+  /* Metrics: stapelen op 1 kolom op SE */
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Trust bar: 1 kolom op SE */
+  .trust-bar__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Calculator display kleiner */
+  .calc-amount-display {
+    font-size: 1.875rem;
+  }
+
+  /* Card nummer kleiner */
+  .card__number {
+    font-size: 2.5rem;
+  }
+}
